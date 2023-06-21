@@ -1,0 +1,70 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Prediction Fer</title>
+  </link>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css')}}">
+</head>
+<body>
+  <div class="container p-3">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header">
+          <h1>FER MODEL RESULTS</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="app" class="container">
+    <div class="row">
+      <div class="col-md-6" id="mainCanvas"></div>
+      <div class="col-md-6 p-3">
+        <p id="prediction"></p>
+        <div class="row mt-4 learning-class" id="class1">
+          <div id="video" class="container">
+            <h3>BEFORE-AFTER VIDEOS</h3>
+            <video controls muted  width="500">
+            <source src="{{url_for('static', filename='/uploads/' + myVideoFer)}}" type="video/mp4"></video>
+
+            <img src="{{url_for('static', filename='/images/arrow2-rm.png')}}" style="margin-bottom: 50px" width="300px">
+
+            <video controls muted  width="500">
+            <source src="{{url_for('static', filename='/processed_video_fer.mp4')}}" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div id="statistics" class="container">
+          <h3>STATISTICS</h3>
+            <span class="times">Average time for processing single frame: {{average_time}}s</span>
+            <span class="times">Standard deviation of processing single frame: {{std_time}}</span>
+            <span class="times">Total time for processing all the video: {{total_time}}s</span>
+            <span class="times">Total processed frames count: {{total_frame_count}}</span> 
+        </div>
+        <div id="emotions" class="container">
+          <h3>FREQUENT EMOTIONS</h3>
+            <span>&#128512; Happy: {{happy_value}}%</span> 
+            <progress class="progress-green" value="{{happy_value}}" max="100"></progress>
+            <span>&#128545; Angry: {{angry_value}}%</span> 
+            <progress class="progress-red" value="{{angry_value}}" max="100"></progress>
+            <span>&#128528; Neutral: {{neutral_value}}%</span> 
+            <progress class="progress-orange" value="{{neutral_value}}" max="100"></progress>
+            <span>&#128549; Sad: {{sad_value}}%</span> 
+            <progress class="progress-blue" value="{{sad_value}}" max="100"></progress>
+            <span>&#128559; Surprise: {{surprise_value}}%</span> 
+            <progress class="progress-yellow" value="{{surprise_value}}" max="100"></progress>
+            <span>&#128541; Disgust: {{disgust_value}}%</span> 
+            <progress class="progress-purple" value="{{disgust_value}}" max="100"></progress>
+            <span>&#128552; Fear: {{fear_value}}%</span> 
+            <progress class="progress-black" value="{{fear_value}}" max="100"></progress>
+        </div>
+        <a href="http://127.0.0.1:5000/" >
+          <button class="main-menu-button">Main Menu</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

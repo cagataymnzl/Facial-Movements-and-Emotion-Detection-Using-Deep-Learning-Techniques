@@ -1,1 +1,54 @@
+<html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Prediction</title>
+  </link>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css')}}">
+</head>
+
+<body style="background-size: 1700px 1000px;">
+  <div class="container p-3">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header">
+          <h1 style="font-size:48px;">EMOTION RECOGNITION</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="app" class="container" style="text-align: center;">
+    <div class="row">
+      <div class="col-md-6" id="mainCanvas"></div>
+      <div class="col-md-6 p-3">
+        <h2 style="font-size:24px;">Please Select a Video and a Model!</h2>
+        <p id="prediction"></p>
+        <div class="row mt-4 learning-class" id="formButtons">
+          <form method="POST" enctype="multipart/form-data">
+            <input id=videoBttn type="file" id="uploadedVideo" name="video"><br>
+            <input id=deepfaceBttn type="submit" formaction="/deepface" value="DeepFace Model" style><br>
+            <input id=trpakovBttn type="submit" formaction="/trpakov" value="TRPakov Model"><br>
+            <input id=ferBttn type="submit" formaction="/fer" value="FER Model"><br>
+            <input id=hybridBttn type="submit" formaction="/hybrid" value="Hybrid Model">
+          </form>
+        </div>
+
+        <span style="font-size: 50px;">&#128512; &#128545; &#128528; &#128549; &#128559; &#128541; &#128552;</span><br>
+        <span style="font-size: 24px;">Happy-Angry-Neutral-Sad-Surprise-Disgust-Fear</span>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flashes">
+          {% for message in messages %}
+          <span style="color: orange; font-size: large">{{ message }}</span>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
