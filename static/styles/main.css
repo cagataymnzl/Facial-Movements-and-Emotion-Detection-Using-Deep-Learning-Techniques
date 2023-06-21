@@ -1,1 +1,247 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/static/images/background.jpeg);
+  background-size: 1700px 1200px;
+}
 
+.header {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+
+#defaultCanvas0 {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+#app {
+  border-style: solid;
+  border-width: thick;
+  border-radius: 10px;
+  border-color: white;
+  margin-right: 120px;
+  margin-left: 120px;
+  color: white;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+#mainCanvas {
+  padding: 0;
+}
+
+#videoBttn {
+  font-size: 24px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+
+.main-menu-button {
+  background-color: white;
+  color: black;
+  border: 3px solid green;
+  padding: 12px 24px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 650px;
+}
+
+#deepfaceBttn {
+  margin-top: 10px;
+  font-size: 24px;
+  border-radius: 12px;
+  border: 3px solid green;
+  margin-bottom: 5px;
+
+}
+
+#trpakovBttn {
+  font-size: 24px;
+  border-radius: 12px;
+  border: 3px solid green;
+  margin-bottom: 5px;
+}
+
+#ferBttn {
+  font-size: 24px;
+  border-radius: 12px;
+  border: 3px solid green;
+  margin-bottom: 5px;
+}
+
+#hybridBttn {
+  font-size: 24px;
+  border-radius: 12px;
+  border: 3px solid green;
+  margin-bottom: 5px;
+}
+
+#video {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  margin-right: 20px;
+}
+
+.times {
+  font-family: "Times New Roman", serif;
+  font-size: 14px;
+  margin-right: 20px;
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;
+  color: whitesmoke;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: whitesmoke;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/*HAPPY*/
+.progress-green {
+  width: 1375px;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+.progress-green::-webkit-progress-value {
+  background: green;
+}
+
+.progress-green::-webkit-progress-bar {
+  background: transparent;
+}
+
+/*ANGRY*/
+.progress-red {
+  width: 1375px;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+.progress-red::-webkit-progress-value {
+  background: red;
+}
+
+.progress-red::-webkit-progress-bar {
+  background: transparent;
+}
+
+/*NEUTRAL*/
+.progress-orange {
+  width: 1375px;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+.progress-orange::-webkit-progress-value {
+  background: orange;
+}
+
+.progress-orange::-webkit-progress-bar {
+  background: transparent;
+}
+
+/*SAD*/
+.progress-blue {
+  width: 1375px;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+.progress-blue::-webkit-progress-value {
+  background: blue;
+}
+
+.progress-blue::-webkit-progress-bar {
+  background: transparent;
+}
+
+/*SURPRISE*/
+.progress-yellow {
+  width: 1375px;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+.progress-yellow::-webkit-progress-value {
+  background: yellow;
+}
+
+.progress-yellow::-webkit-progress-bar {
+  background: transparent;
+}
+
+/*DISGUST*/
+.progress-purple {
+  width: 1375px;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+.progress-purple::-webkit-progress-value {
+  background: purple;
+}
+
+.progress-purple::-webkit-progress-bar {
+  background: transparent;
+}
+
+/*FEAR*/
+.progress-black {
+  width: 1375px;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+.progress-black::-webkit-progress-value {
+  background: black;
+}
+
+.progress-black::-webkit-progress-bar {
+  background: transparent;
+}
