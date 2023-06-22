@@ -28,7 +28,7 @@ def deepface():
         video_path = os.path.join(app.root_path, 'static/uploads', video_file.filename)
         video_file.save(video_path)
 
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture(video_path)
         fps = cap.get(cv2.CAP_PROP_FPS)
 
         face_model = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
